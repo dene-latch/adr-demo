@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  adr:
+    # image: cdp-adr:<tag>
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cdp-adr-container
+    working_dir: /var/app
+    volumes:
+      - ./example-adr/:/var/app/docs/adr
